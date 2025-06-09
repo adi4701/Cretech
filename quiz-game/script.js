@@ -1,4 +1,3 @@
-
 const questions = [
     {
         question: "What is the capital of France?",
@@ -96,6 +95,12 @@ function selectChoice(choiceIndex) {
     });
 }
 
+function checkAnswer() {
+    if (selectedAnswer === questions[currentQuestionIndex].correctAnswer) {
+        score++;
+    }
+    selectedAnswer = null;
+}
 
 function calculateScore() {
     return score;
